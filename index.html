@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>KissSlider</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<!-- js-->
+<script src="js/jquery.js"></script>
+<script src="js/kiss-slider.js"></script>
+<!-- css-->
+<style>
+*{
+	font-family:"微软雅黑";
+}
+body{
+	font-size:14px;
+	padding:0px;
+	margin:0px;
+	color:#fff;
+}
+.code-flow pre{
+	font-size:18px;
+	font-family:"consolas";
+	width:980px;
+	margin:auto;
+	margin-top:20px;
+	padding: 5px;
+}
+#prev-btn,#next-btn{
+	width:50px;
+	height:50px;
+	position:absolute;
+	top: 50%;
+	margin-top: -50px;
+	z-index:99;
+	cursor:pointer;
+	border:1px solid #333;
+	background-color:#555;
+	line-height:50px;
+	font-size:18px;
+	text-align:center;
+}
+#prev-btn{
+	margin-top: -50px;
+}
+#next-btn{
+	right:0px;
+}
+#myslider{}
+#myslider .slider{
+	font-size:24px;
+	text-align:center;
+	padding-top:24px;
+}
+#myslider .active{}
+</style>
+</head>
+<body>
+<div id="prev-btn">prev</div>
+<div id="next-btn">next</div>
+<div id="myslider">
+	<div style="background-color:#3377BB;">
+		<h1>Quick Start</h1>
+		<p>This is a simple demo to show you how to use KissSlider.</br>As you see,this is a full page slider,here is the code:</p>
+		<div class="code-flow">
+			<pre style="border:1px solid #ccc;background-color:#555;text-align:left;">
+&lt;div id="prev-btn"&gt;prev&lt;/div&gt;
+&lt;div id="next-btn"&gt;next&lt;/div&gt;
+&lt;div id="myslider"&gt;
+	&lt;div style="background-color:#3377BB;"&gt;...&lt;/div&gt;
+	&lt;div style="background-color:#CC2F2F;"&gt;...&lt;/div&gt;
+	&lt;div style="background-color:#551199;"&gt;...&lt;/div&gt;
+	&lt;div style="background-color:#33AA33;"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+			<pre style="border:1px solid #ccc;background-color:#555;text-align:left;">
+&lt;script&gt;
+	new KissSlider("myslider","prev-btn","next-btn").validate();
+&lt;/script&gt;</pre>
+		</div>
+	</div>
+	<div style="background-color:#CC2F2F;"></div>
+	<div style="background-color:#551199;"></div>
+	<div style="background-color:#33AA33;"></div>
+</div>
+</body>
+</html>
+<!--
+	NOTICE: you have to wrap the "slider-line" node with a node regarded as a viewport
+-->
+<script>
+	new KissSlider("myslider","prev-btn","next-btn").validate();
+</script>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>KissSlider Demo</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<!-- js-->
+<script src="js/jquery.js"></script>
+<script src="js/kiss-slider.js"></script>
+<!-- css-->
+<style>
+body{
+	padding:0px;
+	margin:0px;
+	font-family:"consolas";
+	color:#fff;
+}
+#prev-btn,#next-btn{
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:0px;
+	z-index:99;
+	cursor:pointer;
+	border:1px solid #333;
+	background-color:#555;
+	line-height:50px;
+	font-size:18px;
+	text-align:center;
+}
+#prev-btn{
+	left:10px;
+}
+#next-btn{
+	left:70px;
+}
+#myslider{
+	margin:auto;
+}
+.slider{
+	font-size:24px;
+	text-align:center;
+}
+.slider div{
+	margin-top:20px;
+}
+</style>
+</head>
+<body>
+<div id="prev-btn">prev</div>
+<div id="next-btn">next</div>
+<div style="font-size:20px;color: #fff; margin: auto; background-color: #EC4B4B; width: 900px;padding: 10px;text-align:center;">the viewport can adapt its height to the activated slider</br>pay attention to the sroll bar</div>
+<div id="myslider">
+	<div style="background-color:#3377BB;"><div style="height:2000px;">This is long text with 2000px-height</div></div>
+	<div style="background-color:#CC2F2F;"><div style="height:200px;">This is short text with 200px-height</div></div>
+		<div style="background-color:#551199;"><div style="height:500px;">This is short text with 500px-height</div></div>
+		<div style="background-color:#33AA33;"><div style="height:1000px;">This is long text with 1000px-height</div></div>
+</div>
+</body>
+</html>
+<!--
+	NOTICE: you have to wrap the "slider-line" node with a node regarded as a view port
+-->
+<script>
+new KissSlider("myslider","prev-btn","next-btn")
+.setFixedView(false)
+.setViewWidth(800)
+.setSliderWidth(800)
+.validate();
+</script>
